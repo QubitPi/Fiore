@@ -1,6 +1,6 @@
 {
-  "name": "docs",
-  "version": "0.0.0",
+  "name": "documentation",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -11,24 +11,33 @@
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
-    "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc"
+    "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@docusaurus/core": "3.0.0",
-    "@docusaurus/preset-classic": "3.0.0",
-    "@docusaurus/theme-common": "3.0.0",
+    "@docusaurus/core": "^3.7.0",
+    "@docusaurus/preset-classic": "^3.7.0",
+    "@docusaurus/theme-search-algolia": "^3.7.0",
+    "@google-web-components/google-chart": "^5.0.5",
+    "@lit-labs/react": "^2.1.3",
     "@mdx-js/react": "^3.0.0",
-    "clsx": "^1.2.1",
-    "prism-react-renderer": "^2.1.0",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "active-table-react": "latest",
+    "clsx": "^2.1.0",
+    "deep-chat-react": "2.1.1",
+    "deep-chat-web-llm": "^0.0.27",
+    "highlight.js": "^11.9.0",
+    "microsoft-cognitiveservices-speech-sdk": "^1.36.0",
+    "prism-react-renderer": "^2.3.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-select": "^5.8.0",
+    "react-tooltip": "^5.26.3",
+    "react-tsparticles": "^2.10.1",
+    "sortablejs": "^1.15.2",
+    "tsparticles": "^2.10.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.0.0",
-    "@docusaurus/tsconfig": "3.0.0",
-    "@docusaurus/types": "3.0.0",
-    "typescript": "~5.2.2"
+    "@docusaurus/module-type-aliases": "3.1.1",
+    "@docusaurus/types": "3.1.1"
   },
   "browserslist": {
     "production": [
@@ -37,13 +46,13 @@
       "not op_mini all"
     ],
     "development": [
-      "last 3 chrome version",
-      "last 3 firefox version",
-      "last 5 safari version"
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   },
   "engines": {
-    "node": ">=22.0"
+    "node": ">=16.14"
   },
   "packageManager": "yarn@4.6.0"
 }

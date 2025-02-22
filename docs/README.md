@@ -1,45 +1,26 @@
-ChatbotWS Documentation
-====================
+<br />
 
-This website is built using [Docusaurus 3](https://docusaurus.io/), a modern static website generator.
+![alt text](../assets/readme/banner-2.png)
 
-Installation
-------------
+<b>Deep Chat</b> is a fully customizable AI chat component that can be injected into your website with minimal to no effort. Whether you want to create a chatbot that leverages popular APIs such as ChatGPT or connect to your own custom service, this component can do it all! Explore [deepchat.dev](https://deepchat.dev/) to view all of the available features, how to use them, examples and more!
 
-```bash
-yarn install
+The documentation website has been built using [Docusaurus 2](https://docusaurus.io/).
+
+## :construction_worker: Local setup
+
+```console
+# Install node dependencies:
+$ yarn install
+
+# automatically build and serve:
+$ yarn start
+
+# build and serve for production:
+$ yarn build
+$ yarn serve
 ```
 
-Local Development
------------------
+## :heart: Contributions
 
-```bash
-yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without
-having to restart the server.
-
-Build
------
-
-```bash
-yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting
-service.
-
-### Troubleshooting
-
-#### Docusaurus Blogs Relative Linking is Treated False-Negative by CI Markdown Link check
-
-[CI check for Markdown link](../.github/workflows/ci-cd.yaml) (`markdown-link-check`) is turned on and it's not smart
-enough to detect relative linking by Docusaurus. The workaround is to disable the link check at the relevant line. For
-example:
-
-```markdown
-<!-- markdown-link-check-disable -->
-known. Additionally, this process makes it easy to implement a [blue-green deployment](continuous-delivery) or
-<!-- markdown-link-check-enable -->
-```
+Open source is built by the community for the community. All contributions to this project are welcome!
+<br> Additionally, if you have any suggestions for enhancements, ideas on how to take the project further or have discovered a bug, do not hesitate to create a new issue ticket and we will look into it as soon as possible!
