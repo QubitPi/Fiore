@@ -13,51 +13,24 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import clsx from 'clsx';
-import Link from '@docusaurus/Link';
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import Head from '@docusaurus/Head';
+import {useRef} from "react";
+import StartPanel from "@site/src/components/StartPanel/StartPanel";
 
-import styles from './index.module.css';
-
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+export default function Home() {
+  const homepageContentRef = useRef(null);
   return (
-    <header className={clsx('hero hero--primary', styles.heroBanner)}>
-      <div className="container">
-        <img
-          className={clsx(styles.heroBannerLogo, "margin-vert--md")}
-          alt="ChatbotWS logo"
-          src={useBaseUrl("img/logo-with-text-white-outline.svg")}
-        />
-        <p className="hero__subtitle">
-          We can <b><em>innovate</em></b> given the <b><em>right technology</em></b>
-        </p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/docs/intro">
-            Start Adding Business Values
-          </Link>
-        </div>
-      </div>
-    </header>
+      <Layout description="Chat component for AI APIs">
+        <Head>
+          <html className="plugin-pages plugin-id-default homepage" />
+        </Head>
+        <main>
+          <div id="homepage-content" ref={homepageContentRef} className="invisible-component">
+            <StartPanel></StartPanel>
+          </div>
+        </main>
+      </Layout>
   );
 }
 
-export default function Home(): JSX.Element {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <Layout
-      title={`${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
-      <main>
-        <HomepageFeatures />
-      </main>
-    </Layout>
-  );
-}

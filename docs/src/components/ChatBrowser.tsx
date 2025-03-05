@@ -13,14 +13,15 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
-}
+import BrowserOnly from '@docusaurus/BrowserOnly';
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+export default function ChatBrowser(props) {
+  return (
+      <BrowserOnly>
+        {() => {
+          const DeepChatReact = require('deep-chat-react').DeepChat;
+          return <DeepChatReact {...props}>{props.children}</DeepChatReact>;
+        }}
+      </BrowserOnly>
+  );
 }

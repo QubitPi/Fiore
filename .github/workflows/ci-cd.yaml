@@ -81,9 +81,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Setup yarn
+        run: |
+          corepack enable
+          yarn set version latest
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -99,8 +103,6 @@ jobs:
         run: mvn -B clean javadoc:javadoc
       - name: Move Javadoc into documentation directory
         run: mv target/site/apidocs/ docs/build/apidocs/
-      - name: Load CNAME file
-        run: cp docs/CNAME docs/build
       - name: Deploy documentation (including Javadoc) to GitHub Pages
         if: github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
@@ -110,6 +112,7 @@ jobs:
           enable_jekyll: false
           user_name: ${{ env.USER }}
           user_email: ${{ env.EMAIL }}
+          cname: chatbot.qubitpi.org
 
   docker-image:
     name: Build Test & Release Development Docker Image
