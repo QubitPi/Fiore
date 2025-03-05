@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocumentation=self.webpackChunkdocumentation||[]).push([[5571],{55684:(e,c,n)=>{n.r(c),n.d(c,{default:()=>u});n(96540);var t=n(74848);function u(e){let{code:c}=e;return(0,t.jsx)("pre",{id:"service-code",children:c})}}}]);
