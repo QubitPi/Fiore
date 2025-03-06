@@ -24,7 +24,7 @@ of its available features, how to use them, examples and more!
 🚀 Quick Start
 --------------
 
-### Spin Up a Container
+### Spinning Up a Container
 
 Please make sure Docker is installed
 ([_Installing Docker_](https://docker.qubitpi.org/desktop/setup/install/mac-install/)), then execute this on-click
@@ -36,8 +36,8 @@ commands:
 > [here](https://platform.openai.com/api-keys)
 
 ```console
-docker run --name=chatbot-ws -it -p 8080:8080 jack20191124/chatbot-ws \
-    -e OPENAI_API_KEY='OPENAI_API_KEY'
+export OPENAI_API_KEY=...
+docker run  -it -p 8080:8080 -e OPENAI_API_KEY=$OPENAI_API_KEY jack20191124/chatbot-ws
 ```
 
 That's it. A healthcheck endpoint can be pinned with
@@ -65,7 +65,7 @@ $ curl -v localhost:8080/v1/healthcheck
 * Connection #0 to host localhost left intact
 ```
 
-### Send First Chat Request
+### Sending the First Chat Request
 
 ```console
 curl --location 'http://localhost:8080/v1/openai/chat' --header 'Content-Type: application/json' --data '{
