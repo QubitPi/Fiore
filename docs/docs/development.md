@@ -221,7 +221,7 @@ mv /path/to/war-file /path/to/jetty-base/webapps/ROOT.war
 java -jar $JETTY_HOME/start.jar
 ```
 
-The webservice will run on port __8080__, and you will see the data you inserted
+The webservice will run on port __8080__
 
 Troubleshooting
 ---------------

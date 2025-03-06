@@ -23,7 +23,7 @@ import org.eclipse.jetty.server.Server
 import io.restassured.RestAssured
 import spock.lang.Specification
 
-class OpenaiServletITSpec extends Specification {
+class HealthcheckServletITSpec extends Specification {
 
     static final int PORT = 8080
 
