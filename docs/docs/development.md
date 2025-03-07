@@ -3,8 +3,7 @@ sidebar_position: 3
 title: Development
 ---
 
-The following guide is intended to help developers who maintain or want to make changes to the Jersey Webservice
-Template.
+The following guide is intended to help developers who maintain or want to make changes to the Chatbot WS template.
 
 Preparing for Local Development
 -------------------------------
@@ -149,8 +148,14 @@ that value with anything preferred
 
 When image is built, we can spin up an instance with
 
-```bash
-docker run --name=chatbot-ws -it -p 8080:8080 jack20191124/chatbot-ws
+> [!IMPORTANT]
+>
+> Please replace the `OPENAI_API_KEY` below with the actual key which can be obtained
+> [here](https://platform.openai.com/api-keys)
+
+```console
+export OPENAI_API_KEY=...
+docker run --name=chatbot-ws -it -p 8080:8080 -e OPENAI_API_KEY=$OPENAI_API_KEY sg-hengrui/chatbot-ws
 ```
 
 - __name=chatbot-ws__: the container is named "chatbot-ws". We can change it
@@ -241,9 +246,9 @@ resources explicitly by telling IntelliJ where those resources are:
 We use 4-space as tab. This can be configured at __Code Style__ -> __Java__ -> __Tabs and Indents__ with the following
 settings:
 
-Tab size: 4
-Indent: 4
-Continuation indent: 8
+- Tab size: 4
+- Indent: 4
+- Continuation indent: 8
 
 If tabs still come out at 2 spaces when hitting TAB or Enter, not 4 spaces, try:
 

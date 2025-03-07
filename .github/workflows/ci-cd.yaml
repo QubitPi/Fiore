@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Set up JDK 17
+      - name: Set up JDK ${{ env.JDK_VERSION }}
         uses: actions/setup-java@v3
         with:
           java-version: ${{ env.JDK_VERSION }}
@@ -88,7 +88,7 @@ jobs:
         run: |
           corepack enable
           yarn set version latest
-      - name: Set up JDK 17
+      - name: Set up JDK ${{ env.JDK_VERSION }}
         uses: actions/setup-java@v3
         with:
           java-version: ${{ env.JDK_VERSION }}
@@ -121,7 +121,7 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Set up JDK 17
+      - name: Set up JDK ${{ env.JDK_VERSION }}
         uses: actions/setup-java@v3
         with:
           java-version: ${{ env.JDK_VERSION }}
