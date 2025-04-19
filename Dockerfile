@@ -34,7 +34,8 @@ ENV JETTY_WEBAPPS_DIR $JETTY_BASE/webapps
 RUN apt update
 RUN apt upgrade -y
 RUN apt install software-properties-common -y
-RUN apt install wget
+RUN apt install wget -y
+RUN apt install curl -y
 
 # Install JDK 17 - https://www.rosehosting.com/blog/how-to-install-java-17-lts-on-ubuntu-20-04/
 RUN apt update -y
