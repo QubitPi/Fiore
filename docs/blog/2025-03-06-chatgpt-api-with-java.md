@@ -67,5 +67,4 @@ public Response chat(@NotNull final String chatMessage) throws IOException, Inte
             )
             .build();
 }
-
 ```

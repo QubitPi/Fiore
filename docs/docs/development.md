@@ -148,14 +148,19 @@ that value with anything preferred
 
 When image is built, we can spin up an instance with
 
-> [!IMPORTANT]
->
-> Please replace the `OPENAI_API_KEY` below with the actual key which can be obtained
-> [here](https://platform.openai.com/api-keys)
+:::info
+
+Please replace the `OPENAI_API_KEY` below with the actual key which can be obtained
+[here](https://platform.openai.com/api-keys)
+
+:::
 
 ```console
 export OPENAI_API_KEY=...
-docker run --name=chatbot-ws -it -p 8080:8080 -e OPENAI_API_KEY=$OPENAI_API_KEY jack20191124/chatbot-ws
+docker run --name=chatbot-ws -it \
+    -p 8080:8080 \
+    -e OPENAI_API_KEY=$OPENAI_API_KEY \
+    jack20191124/chatbot-ws
 ```
 
 - __name=chatbot-ws__: the container is named "chatbot-ws". We can change it
