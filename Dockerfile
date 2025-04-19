@@ -44,10 +44,10 @@ RUN apt install openjdk-17-jdk -y
 RUN wget https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/$JETTY_VERSION/jetty-home-$JETTY_VERSION.tar.gz
 RUN tar -xzvf jetty-home-$JETTY_VERSION.tar.gz
 RUN rm jetty-home-$JETTY_VERSION.tar.gz
-RUN mkdir jetty-base
-RUN cd jetty-base && java -jar $JETTY_HOME/start.jar --add-module=annotations,server,http,deploy,servlet,webapp,resources,jsp
+RUN mkdir $JETTY_BASE
+RUN cd $JETTY_BASE && java -jar $JETTY_HOME/start.jar --add-module=annotations,server,http,deploy,servlet,webapp,resources,jsp
 
 COPY --from=build /chatbot-ws/target/chatbot-ws-$WS_VERSION.war $JETTY_WEBAPPS_DIR/ROOT.war
 
-COPY ./Dockerfile-startup.sh /Dockerfile-startup.sh
-CMD [ "/Dockerfile-startup.sh" ]
+# See https://stackoverflow.com/a/37904830
+ENTRYPOINT cd $JETTY_BASE && java -jar $JETTY_HOME/start.jar

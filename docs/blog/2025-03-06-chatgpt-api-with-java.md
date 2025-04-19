@@ -10,7 +10,7 @@ supercharger to our already powerful engine.
 
 <!--truncate-->
 
-This code snippet shows the hello-world example of how to proxy the chat against OpenAI ChatGPT models in [Jersey]-based
+This code snippet shows the hello-world example of how to proxy the chat against OpenAI ChatGPT models in Jersey-based
 webservice:
 
 ```java
@@ -69,5 +69,3 @@ public Response chat(@NotNull final String chatMessage) throws IOException, Inte
 }
 
 ```
-
-[Jersey]: https://qubitpi.github.io/jersey/
