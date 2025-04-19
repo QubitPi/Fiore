@@ -9,7 +9,7 @@
 
 
 <link rel="search" type="application/opensearchdescription+xml" title="ChatbotWS" href="/opensearch.xml"><link rel="stylesheet" href="/assets/css/styles.8e9c077b.css">
-<script src="/assets/js/runtime~main.de608078.js" defer="defer"></script>
+<script src="/assets/js/runtime~main.676f6d7c.js" defer="defer"></script>
 <script src="/assets/js/main.9b6e3844.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -66,12 +66,9 @@ commands:</p>
 that value with anything preferred</p>
 <h3 class="anchor anchorWithStickyNavbar_L1yj" id="standing-up-a-container">Standing up a Container<a href="#standing-up-a-container" class="hash-link" aria-label="Direct link to Standing up a Container" title="Direct link to Standing up a Container">​</a></h3>
 <p>When image is built, we can spin up an instance with</p>
-<blockquote>
-<p>[!IMPORTANT]</p>
-<p>Please replace the <code>OPENAI_API_KEY</code> below with the actual key which can be obtained
-<a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">here</a></p>
-</blockquote>
-<div class="language-console codeBlockContainer_dsFJ theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_qwYU"><pre tabindex="0" class="prism-code language-console codeBlock_OAmf thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_y6aT"><span class="token-line" style="color:#393A34"><span class="token plain">export OPENAI_API_KEY=...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker run --name=chatbot-ws -it -p 8080:8080 -e OPENAI_API_KEY=$OPENAI_API_KEY jack20191124/chatbot-ws</span><br></span></code></pre><div class="buttonGroup_WeXH"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_YJer" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_h31_"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Vii8"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
+<div class="theme-admonition theme-admonition-info admonition_dFHE alert alert--info"><div class="admonitionHeading_PQ65"><span class="admonitionIcon_YzJa"><svg viewBox="0 0 14 16"><path fill-rule="evenodd" d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z"></path></svg></span>info</div><div class="admonitionContent_sFKi"><p>Please replace the <code>OPENAI_API_KEY</code> below with the actual key which can be obtained
+<a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">here</a></p></div></div>
+<div class="language-console codeBlockContainer_dsFJ theme-code-block" style="--prism-color:#393A34;--prism-background-color:#f6f8fa"><div class="codeBlockContent_qwYU"><pre tabindex="0" class="prism-code language-console codeBlock_OAmf thin-scrollbar" style="color:#393A34;background-color:#f6f8fa"><code class="codeBlockLines_y6aT"><span class="token-line" style="color:#393A34"><span class="token plain">export OPENAI_API_KEY=...</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">docker run --name=chatbot-ws -it \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -p 8080:8080 \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    -e OPENAI_API_KEY=$OPENAI_API_KEY \</span><br></span><span class="token-line" style="color:#393A34"><span class="token plain">    jack20191124/chatbot-ws</span><br></span></code></pre><div class="buttonGroup_WeXH"><button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn"><span class="copyButtonIcons_YJer" aria-hidden="true"><svg viewBox="0 0 24 24" class="copyButtonIcon_h31_"><path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path></svg><svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_Vii8"><path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path></svg></span></button></div></div></div>
 <ul>
 <li><strong>name=chatbot-ws</strong>: the container is named &quot;chatbot-ws&quot;. We can change it
 accordingly.</li>
