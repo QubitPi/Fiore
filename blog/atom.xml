@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://chatbot.qubitpi.org/blog</id>
-    <title>ChatbotWS Blog</title>
+    <id>https://fiore.qubitpi.org/blog</id>
+    <title>Fiore Blog</title>
     <updated>2025-03-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://chatbot.qubitpi.org/blog"/>
-    <subtitle>ChatbotWS Blog</subtitle>
-    <icon>https://chatbot.qubitpi.org/img/favicon.ico</icon>
+    <link rel="alternate" href="https://fiore.qubitpi.org/blog"/>
+    <subtitle>Fiore Blog</subtitle>
+    <icon>https://fiore.qubitpi.org/img/favicon.ico</icon>
     <entry>
         <title type="html"><![CDATA[How to Use the ChatGPT API with Java]]></title>
-        <id>https://chatbot.qubitpi.org/blog/openai-chatgpt-http-basic</id>
-        <link href="https://chatbot.qubitpi.org/blog/openai-chatgpt-http-basic"/>
+        <id>https://fiore.qubitpi.org/blog/openai-chatgpt-http-basic</id>
+        <link href="https://fiore.qubitpi.org/blog/openai-chatgpt-http-basic"/>
         <updated>2025-03-06T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Imagine harnessing the power of ChatGPT's human-like responses right from our webservice! It'd be like adding a]]></summary>
         <content type="html"><![CDATA[<p>Imagine harnessing the power of ChatGPT's human-like responses right from our webservice! It'd be like adding a

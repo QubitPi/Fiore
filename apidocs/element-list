@@ -1,4 +1,4 @@
-com.qubitpi.chatbotws.application
-com.qubitpi.chatbotws.config
-com.qubitpi.chatbotws.web.endpoints
-com.qubitpi.chatbotws.web.filters
+com.qubitpi.fiore.application
+com.qubitpi.fiore.config
+com.qubitpi.fiore.web.endpoints
+com.qubitpi.fiore.web.filters

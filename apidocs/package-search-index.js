@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.qubitpi.chatbotws.application"},{"l":"com.qubitpi.chatbotws.config"},{"l":"com.qubitpi.chatbotws.web.endpoints"},{"l":"com.qubitpi.chatbotws.web.filters"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.qubitpi.fiore.application"},{"l":"com.qubitpi.fiore.config"},{"l":"com.qubitpi.fiore.web.endpoints"},{"l":"com.qubitpi.fiore.web.filters"}];updateSearchResults();
