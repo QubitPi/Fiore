@@ -1,4 +1,4 @@
-com.qubitpi.fiore.application
-com.qubitpi.fiore.config
-com.qubitpi.fiore.web.endpoints
-com.qubitpi.fiore.web.filters
+org.qubitpi.fiore.application
+org.qubitpi.fiore.config
+org.qubitpi.fiore.web.endpoints
+org.qubitpi.fiore.web.filters

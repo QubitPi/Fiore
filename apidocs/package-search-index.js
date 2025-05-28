@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"com.qubitpi.fiore.application"},{"l":"com.qubitpi.fiore.config"},{"l":"com.qubitpi.fiore.web.endpoints"},{"l":"com.qubitpi.fiore.web.filters"}];updateSearchResults();
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"org.qubitpi.fiore.application"},{"l":"org.qubitpi.fiore.config"},{"l":"org.qubitpi.fiore.web.endpoints"},{"l":"org.qubitpi.fiore.web.filters"}];updateSearchResults();
