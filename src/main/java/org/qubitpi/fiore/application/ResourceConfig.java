@@ -15,8 +15,6 @@
  */
 package org.qubitpi.fiore.application;
 
-import org.aeonbits.owner.ConfigFactory;
-import org.glassfish.hk2.api.Factory;
 import org.qubitpi.fiore.config.ApplicationConfig;
 import org.qubitpi.fiore.web.endpoints.OpenaiServlet;
 import org.qubitpi.fiore.web.filters.CorsFilter;
@@ -38,24 +36,6 @@ import net.jcip.annotations.ThreadSafe;
 public class ResourceConfig extends org.glassfish.jersey.server.ResourceConfig {
 
     private static final String ENDPOINT_PACKAGE = OpenaiServlet.class.getPackage().getName();
-
-    /**
-     * Injecting environment into the Jersey config for separation of concerns.
-     * <p>
-     * Resource configuration should not care about where it's getting credentials or config from. These are separate
-     * concerns.
-     */
-    public static class ApplicationConfigFactory implements Factory<ApplicationConfig> {
-        @Override
-        public ApplicationConfig provide() {
-            return ConfigFactory.create(ApplicationConfig.class);
-        }
-
-        @Override
-        public void dispose(final ApplicationConfig applicationConfig) {
-
-        }
-    }
 
     /**
      * DI Constructor that allows for finer dependency injection control.
