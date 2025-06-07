@@ -45,7 +45,7 @@ public class ResourceConfig extends org.glassfish.jersey.server.ResourceConfig {
      * Resource configuration should not care about where it's getting credentials or config from. These are separate
      * concerns.
      */
-    public class ApplicationConfigFactory implements Factory<ApplicationConfig> {
+    public static class ApplicationConfigFactory implements Factory<ApplicationConfig> {
         @Override
         public ApplicationConfig provide() {
             return ConfigFactory.create(ApplicationConfig.class);
