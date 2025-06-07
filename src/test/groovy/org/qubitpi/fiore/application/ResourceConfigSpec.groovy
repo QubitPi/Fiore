@@ -15,6 +15,7 @@
  */
 package org.qubitpi.fiore.application
 
+import org.qubitpi.fiore.config.ApplicationConfig
 import org.qubitpi.fiore.web.filters.CorsFilter
 
 import org.glassfish.jersey.internal.inject.Binder
@@ -23,7 +24,7 @@ import spock.lang.Specification
 
 class ResourceConfigSpec extends Specification {
 
-    static final Set<Class> ALWAYS_REGISTERED_FILTERS = [CorsFilter] as Set
+    static final Set<Class> ALWAYS_REGISTERED_FILTERS = [] as Set
 
     @SuppressWarnings('GroovyAccessibility')
     def "Instantiation triggers initialization and binding lifecycles"() {
@@ -32,9 +33,43 @@ class ResourceConfigSpec extends Specification {
         binderFactory.buildBinder() >> Mock(Binder)
 
         when: "injecting resources"
-        org.glassfish.jersey.server.ResourceConfig resourceConfig = new ResourceConfig()
+        org.glassfish.jersey.server.ResourceConfig resourceConfig = new ResourceConfig(
+                Mock(ApplicationConfig) {
+                    enableCors() >> false
+                }
+        )
 
         then: "all request & response filters are injected"
         resourceConfig.classes.containsAll(ALWAYS_REGISTERED_FILTERS)
+    }
+
+    def "#name filter can be turned on/off at compile-time"() {
+        setup: "binder is mocked out"
+        BinderFactory binderFactory = Mock(BinderFactory)
+        binderFactory.buildBinder() >> Mock(Binder)
+
+        when: "filter is turned on"
+        org.glassfish.jersey.server.ResourceConfig resourceConfig = new ResourceConfig(
+                Mock(ApplicationConfig) {
+                    enableCors() >> true
+                }
+        )
+
+        then: "the filter is injected"
+        resourceConfig.classes.contains(filter)
+
+        when: "filter is turned off"
+        resourceConfig = new ResourceConfig(
+                Mock(ApplicationConfig) {
+                    enableCors() >> false
+                }
+        )
+
+        then: "the filter is injected"
+        !resourceConfig.classes.contains(filter)
+
+        where:
+        name   | filter | configName
+        "CORS" | CorsFilter | "ENABLE_CORS"
     }
 }

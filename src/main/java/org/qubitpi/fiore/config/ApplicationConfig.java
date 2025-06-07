@@ -45,10 +45,13 @@ import net.jcip.annotations.ThreadSafe;
 public interface ApplicationConfig extends Config {
 
     /**
-     * Example config definition.
+     * Whether to turn on {@link org.qubitpi.fiore.web.filters.CorsFilter} for all endpoints.
+     * <p>
+     * The CORS is turned off by default.
      *
-     * @return a config value as string.
+     * @return {@code true} CORS headers will be automatically attached to all responses or {@code false}, otherwise
      */
-    @Key("EXAMPLE_CONFIG_KEY_NAME")
-    String exampleConfigKey();
+    @Key("ENABLE_CORS")
+    @DefaultValue("false")
+    boolean enableCors();
 }
