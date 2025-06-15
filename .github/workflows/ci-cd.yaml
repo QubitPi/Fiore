@@ -54,29 +54,9 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
       - uses: pre-commit/action@2c7b3805fd2a0fd8c1884dcaebf91fc102a13ecd #v3.0.1
 
-  yaml-lint:
-    name: YAML Style Check
-    needs: pre-commit
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 #v4.2.2
-        with:
-          persist-credentials: false
-      - uses: actionshub/yamllint@00f4f7f756a93a38e77ea1af41a46b48fd893dcd # v1.8.3
-
-  markdown-lint:
-    name: Markdown Style Check
-    needs: pre-commit
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 #v4.2.2
-        with:
-          persist-credentials: false
-      - uses: actionshub/markdownlint@6c82ff529253530dfbf75c37570876c52692835f # v3.1.4
-
   tests:
     name: Unit & Integration Tests
-    needs: [yaml-lint, markdown-lint]
+    needs: pre-commit
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
