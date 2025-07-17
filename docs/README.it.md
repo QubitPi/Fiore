@@ -25,7 +25,8 @@ Sviluppo locale
 ---------------
 
 Per creare la documentazione in locale, dobbiamo prima assicurarci che Node sia
-[installato](https://deb.nodesource.com/) e quindi eseguire il seguente comando dalla cartella `doc` del progetto Fiore:
+[installato](https://nodesource.com/products/distributions) e quindi eseguire il seguente comando dalla cartella `doc`
+del progetto Fiore:
 
 ```console
 yarn

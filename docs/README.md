@@ -29,8 +29,9 @@ enough to give you a head start.
 Local Development
 -----------------
 
-In order to build the documentation locally, we first need to make sure Node is [installed](https://deb.nodesource.com/)
-and then run the following command from the `doc` folder of Fiore project:
+In order to build the documentation locally, we first need to make sure Node is
+[installed](https://nodesource.com/products/distributions) and then run the following command from the `doc` folder of
+Fiore project:
 
 ```console
 yarn
